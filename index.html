@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Draggable Todo App</title>
+  </head>
+  <body>
+    <div class="modal" id="todo_form">
+      <div class="header">
+        <div class="title">Add Todo</div>
+        <button id="close-modal" onclick="closeModal(this)" class="btn close-modal">&times;</button>
+      </div>
+      <div class="body">
+        <input type="text" id="todo_input" />
+        <input type="submit" value="Add Todo" id="todo_submit" />
+      </div>
+    </div>
+    <div class="todo-container">
+      <div class="status" id="no_status" data-value="no_status">
+        <h1>No Status</h1>
+        <button onclick="openModal(this)" id="add_btn" data-target-modal="#todo_form">+ Add Todo</button>
+        <div class="status__box" id="no-status-Container"></div>
+      </div>
+      <div class="status" data-value="not_started">
+        <h1>Not Started</h1>
+        <div class="status__box"></div>
+      </div>
+      <div class="status" data-value="in_progress">
+        <h1>In Progress</h1>
+        <div class="status__box"></div>
+      </div>
+      <div class="status" data-value="completed">
+        <h1>Completed</h1>
+        <div class="status__box"></div>
+      </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
